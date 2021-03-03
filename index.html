@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Joke Generator</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="jokes.js"></script>
+    <script defer src="script.js"></script>
+</head>
+
+<body>
+    <header class="header">
+        <h1 class="header__title">Random joke generator</h1>
+    </header>
+    <main class="main">
+        <nav class="nav">
+            <p class="nav__caption">Choose a category:</p>
+            <ul class="nav__list">
+                <li class="nav__item">
+                    <input type="radio" name="joke-category" id="animal-jokes" value="animal-jokes" class="nav__radio">
+                    <label for="animal-jokes" class="nav__label">Animal jokes</label>
+                </li>
+                <li class="nav__item">
+                    <input type="radio" name="joke-category" id="computer-jokes" value="computer-jokes"
+                        class="nav__radio">
+                    <label for="computer-jokes" class="nav__label">Computer jokes</label>
+                </li>
+                <li class="nav__item">
+                    <input type="radio" name="joke-category" id="birthday-jokes" value="birthday-jokes"
+                        class="nav__radio">
+                    <label for="birthday-jokes" class="nav__label">Birthday jokes</label>
+                </li>
+                <li class="nav__item">
+                    <input type="radio" name="joke-category" id="food-jokes" value="food-jokes" class="nav__radio">
+                    <label for="food-jokes" class="nav__label">Food jokes</label>
+                </li>
+                <li class="nav__item">
+                    <input type="radio" name="joke-category" id="sports-jokes" value="sports-jokes" class="nav__radio">
+                    <label for="sports-jokes" class="nav__label">Sports jokes</label>
+                </li>
+            </ul>
+            <button type="button" class="nav__button">Display random joke</button>
+        </nav>
+        <article class="joke">
+            <h2 class="joke__heading"></h2>
+            <p class="joke__content"></p>
+        </article>
+    </main>
+    <footer class="footer">
+        <p class="footer__text">&copy; 2021 - Wessel Konstantinov</p>
+    </footer>
+</body>
+
+</html>

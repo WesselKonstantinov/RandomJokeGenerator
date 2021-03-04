@@ -14,10 +14,11 @@
 <body>
     <header class="header">
         <h1 class="header__title">Random joke generator</h1>
+        <img class="header__image" src="images/laughing-emoji-background.jpg" alt="A background of laughing emojis">
     </header>
     <main class="main">
         <nav class="nav">
-            <p class="nav__caption">Choose a category:</p>
+            <h2 class="nav__caption">Choose a category:</h2>
             <ul class="nav__list">
                 <li class="nav__item">
                     <input type="radio" name="joke-category" id="animal-jokes" value="animal-jokes" class="nav__radio">
@@ -42,8 +43,8 @@
                     <label for="sports-jokes" class="nav__label">Sports jokes</label>
                 </li>
             </ul>
-            <button type="button" class="nav__button">Display random joke</button>
         </nav>
+        <button type="button" class="main__button">Display random joke</button>
         <article class="joke">
             <h2 class="joke__heading"></h2>
             <p class="joke__content"></p>

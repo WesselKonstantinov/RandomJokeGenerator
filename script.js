@@ -20,7 +20,7 @@ const displayRandomJoke = jokes => {
     displays a random joke in a variable
 */
 const radioButtons = document.querySelectorAll('.nav__radio');
-const displayRandomJokeButton = document.querySelector('.nav__button');
+const displayRandomJokeButton = document.querySelector('.main__button');
 
 // Attach a click event listener to the joke generator button
 displayRandomJokeButton.addEventListener('click', () => {

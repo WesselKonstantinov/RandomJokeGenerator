@@ -1,0 +1,129 @@
+/* Base Styles And Layout */
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1em;
+}
+
+/* Header Styles */
+.header {
+  border: 1px solid #000;
+  padding: 30px;
+  position: relative;
+  overflow: hidden;
+}
+
+.header__title {
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
+
+.header__image {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: auto;
+  opacity: 0.4;
+}
+
+/* Main Content Styles */
+.main {
+  background-color: #fcfc9f;
+  border-left: 1px solid #000;
+  border-right: 1px solid #000;
+  display: -ms-grid;
+  display: grid;
+  grid-gap: 10px;
+}
+
+.main__button {
+  font-size: inherit;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #d3ebf3;
+  display: block;
+  margin: 0 auto;
+}
+
+.nav__caption {
+  text-align: center;
+  font-size: 1.3em;
+  padding: 10px;
+}
+
+.nav__list {
+  list-style: none;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+}
+
+.nav__item {
+  margin: 0 0 10px 20px;
+}
+
+.joke {
+  padding: 10px 0 20px 0;
+}
+
+.joke__heading {
+  text-align: center;
+  font-size: 1.6em;
+}
+
+.joke__content {
+  text-align: center;
+  font-size: 1.3em;
+  font-style: italic;
+}
+
+/* Footer Styles */
+.footer {
+  background-color: #d3ebf3;
+  padding: 30px;
+  border: 1px solid #000;
+}
+
+.footer__text {
+  text-align: center;
+}
+
+/* Media Queries */
+@media screen and (min-width: 500px) {
+  .nav__list {
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Media Queries Specific To Tablet Styles */
+@media screen and (min-width: 768px) {
+  .nav__list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  .nav__item {
+    margin: 0;
+  }
+}
+
+/* Media Queries Specific To Desktop Styles */
+@media screen and (min-width: 1024px) {
+  body {
+    width: 900px;
+    margin: 0 auto;
+  }
+}
+/*# sourceMappingURL=styles.css.map */

@@ -1,0 +1,10 @@
+// Variables
+$primary-font: Arial, Helvetica, sans-serif;
+$color-black: #000;
+$color-blue: #d3ebf3;
+$color-yellow: #fcfc9f;
+
+// Mixins
+@mixin align-center {
+    text-align: center;
+}

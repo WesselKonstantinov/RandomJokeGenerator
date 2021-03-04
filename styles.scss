@@ -1,0 +1,62 @@
+@import 'constants';
+
+/* Base Styles And Layout */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: $primary-font;
+    font-size: 1em;
+}
+
+/* Header Styles */
+.header {
+    border: 1px solid $color-black;
+    padding: 30px;
+    position: relative;
+    overflow: hidden;
+
+    &__title {
+        text-align: center;
+        position: relative;
+        z-index: 2;
+    }
+
+    &__image {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: auto;
+        opacity: 0.4;
+    }
+}
+
+/* Main Content Styles */
+.main {
+    background-color: red; // For debugging
+    border-left: 1px solid $color-black;
+    border-right: 1px solid $color-black;
+}
+
+/* Footer Styles */
+.footer {
+    background-color: $color-blue;
+    padding: 30px;
+    border: 1px solid $color-black;
+    
+    &__text {
+        text-align: center;
+    }
+}
+
+/* Media Queries For Desktop */
+@media screen and (min-width: 1024px) {
+    body {
+        width: 900px;
+        margin: 0 auto;
+    }
+}

@@ -1,0 +1,62 @@
+/* Base Styles And Layout */
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1em;
+}
+
+/* Header Styles */
+.header {
+  border: 1px solid #000;
+  padding: 30px;
+  position: relative;
+  overflow: hidden;
+}
+
+.header__title {
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
+
+.header__image {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: auto;
+  opacity: 0.4;
+}
+
+/* Main Content Styles */
+.main {
+  background-color: red;
+  border-left: 1px solid #000;
+  border-right: 1px solid #000;
+}
+
+/* Footer Styles */
+.footer {
+  background-color: #d3ebf3;
+  padding: 30px;
+  border: 1px solid #000;
+}
+
+.footer__text {
+  text-align: center;
+}
+
+/* Media Queries For Desktop */
+@media screen and (min-width: 1024px) {
+  body {
+    width: 900px;
+    margin: 0 auto;
+  }
+}
+/*# sourceMappingURL=styles.css.map */

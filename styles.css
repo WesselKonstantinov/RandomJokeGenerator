@@ -36,9 +36,54 @@ body {
 
 /* Main Content Styles */
 .main {
-  background-color: red;
+  background-color: #fcfc9f;
   border-left: 1px solid #000;
   border-right: 1px solid #000;
+  display: -ms-grid;
+  display: grid;
+  grid-gap: 10px;
+}
+
+.main__button {
+  font-size: inherit;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #d3ebf3;
+  display: block;
+  margin: 0 auto;
+}
+
+.nav__caption {
+  text-align: center;
+  font-size: 1.3em;
+  padding: 10px;
+}
+
+.nav__list {
+  list-style: none;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+}
+
+.nav__item {
+  margin: 0 0 10px 20px;
+}
+
+.joke {
+  padding: 10px 0 20px 0;
+}
+
+.joke__heading {
+  text-align: center;
+  font-size: 1.6em;
+}
+
+.joke__content {
+  text-align: center;
+  font-size: 1.3em;
+  font-style: italic;
 }
 
 /* Footer Styles */
@@ -52,7 +97,29 @@ body {
   text-align: center;
 }
 
-/* Media Queries For Desktop */
+/* Media Queries */
+@media screen and (min-width: 500px) {
+  .nav__list {
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Media Queries Specific To Tablet Styles */
+@media screen and (min-width: 768px) {
+  .nav__list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  .nav__item {
+    margin: 0;
+  }
+}
+
+/* Media Queries Specific To Desktop Styles */
 @media screen and (min-width: 1024px) {
   body {
     width: 900px;

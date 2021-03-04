@@ -20,7 +20,7 @@ body {
     overflow: hidden;
 
     &__title {
-        text-align: center;
+        @include align-center;
         position: relative;
         z-index: 2;
     }
@@ -37,9 +37,53 @@ body {
 
 /* Main Content Styles */
 .main {
-    background-color: red; // For debugging
+    background-color: $color-yellow;
     border-left: 1px solid $color-black;
     border-right: 1px solid $color-black;
+    display: grid;
+    grid-gap: 10px;
+
+    &__button {
+        font-size: inherit;
+        padding: 10px;
+        border-radius: 5px;
+        background-color: $color-blue;
+        display: block;
+        margin: 0 auto;
+    }
+}
+
+.nav {
+    &__caption {
+        @include align-center;
+        font-size: 1.3em;
+        padding: 10px;
+    }
+
+    &__list {
+        list-style: none;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    &__item {
+        margin: 0 0 10px 20px;
+    }
+}
+
+.joke {
+    padding: 10px 0 20px 0;
+
+    &__heading {
+        @include align-center;
+        font-size: 1.6em;
+    }
+
+    &__content {
+        @include align-center;
+        font-size: 1.3em;
+        font-style: italic;
+    }
 }
 
 /* Footer Styles */
@@ -49,11 +93,34 @@ body {
     border: 1px solid $color-black;
     
     &__text {
-        text-align: center;
+        @include align-center;
     }
 }
 
-/* Media Queries For Desktop */
+/* Media Queries */
+@media screen and (min-width: 500px) {
+    .nav {
+        &__list {
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+}
+
+/* Media Queries Specific To Tablet Styles */
+@media screen and (min-width: 768px) {
+    .nav {
+        &__list {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        &__item {
+            margin: 0;
+        }
+    }
+}
+
+/* Media Queries Specific To Desktop Styles */
 @media screen and (min-width: 1024px) {
     body {
         width: 900px;
